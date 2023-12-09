@@ -1,0 +1,196 @@
+/* body{
+    overflow: hidden;
+} */
+
+.icon{
+    font-size: 3rem;
+    text-align: center;
+}
+.parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    margin-top: 7rem !important;
+    background-color: red;
+}
+.parent h1{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 4rem !important;
+}
+.about{
+    width: 50%;
+    text-align: center;
+    /* margin-left: 24em; */
+}
+.about p{
+    color: #807D7D;
+    margin-top: 1rem !important;
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #807D7D;
+    margin-bottom: 5rem !important;
+}
+input{
+    display: none;
+}
+.card-container{
+    width: 100%;
+    height: 100%;
+    max-width: 100.5rem;
+    max-height: 100.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    align-self: center;
+    margin-left: -1em !important;
+    transform-style: preserve-3d;
+    flex-direction: column;
+    margin-top: 3.125rem;
+    margin-bottom: 6.25rem;
+    border-radius: 0.625rem;
+}
+.cards{
+    position: relative;
+    height: 32.25rem;
+    width: 26.25rem;
+    margin-bottom: 1.25rem;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+}
+.cards label{
+    position: absolute;
+    border-radius: 10px;
+    width: 50.25rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+}
+.cards .card{
+    position: relative;
+    height: 28rem;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    padding: 30px 35px;
+    
+}
+.test{
+    filter: blur(10px);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-flow: column-reverse;
+    margin: 0;
+}
+.card h2{
+    text-align: center;
+    margin-top: 0.75em !important;
+    /* margin-bottom: 0.25em !important; */
+    font-size: 1.25rem;
+    font-weight: 500;
+   visibility: hidden;
+   
+}
+.card h3{
+   text-align: center;
+   font-size: 1.5rem;
+   margin-bottom: -5rem !important;
+   font-weight: 400;
+   visibility: hidden;
+}
+.cards .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+    margin-top: -2em !important;
+}
+.cards .image img{
+    width: 60%;
+    /* height: 400px; */
+    border-radius: 5px;
+    margin-top: 5rem;
+    object-fit: cover;
+    transition: all .7s;
+}
+.cards .image img:hover{
+    transform: scale(1.05);
+}
+
+/* WORKING OF SLIDER */
+
+#s1:checked~.cards #slide4,
+#s2:checked~.cards #slide5,
+#s3:checked~.cards #slide1,
+#s4:checked~.cards #slide2,
+#s5:checked~.cards #slide3
+{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 45%);
+    transform: translate3d(-70%, 0 , -220px);
+}
+
+#s1:checked~.cards #slide5,
+#s2:checked~.cards #slide1,
+#s3:checked~.cards #slide2,
+#s4:checked~.cards #slide3,
+#s5:checked~.cards #slide4
+{
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 45%);
+    transform: translate3d(35%, 0 , -120px);   
+}
+
+#s1:checked~.cards #slide1,
+#s2:checked~.cards #slide2,
+#s3:checked~.cards #slide3,
+#s4:checked~.cards #slide4,
+#s5:checked~.cards #slide5
+{
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 50%);
+    transform: translate3d(0, 0 , 0);
+}
+#s1:checked~.cards #slide2,
+#s2:checked~.cards #slide3,
+#s3:checked~.cards #slide4,
+#s4:checked~.cards #slide5,
+#s5:checked~.cards #slide1
+{
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 45%);
+    transform: translate3d(-35%, 0 , -120px);
+}
+#s1:checked~.cards #slide3,
+#s2:checked~.cards #slide4,
+#s3:checked~.cards #slide5,
+#s4:checked~.cards #slide1,
+#s5:checked~.cards #slide2
+{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 45%);
+    transform: translate3d(-70%, 0 , -220px);
+}
+#s1:checked~.cards h3{
+    visibility: visible;
+}
+#s2:checked~.cards h3{
+    visibility: visible;
+}
+#s3:checked~.cards h3{
+    visibility: visible;
+}
+#s4:checked~.cards h3{
+    visibility: visible;
+}
+#s5:checked~.cards h3{
+    visibility: visible;
+}
+
+#s3:checked ~ .parent{
+    background-color: aqua;
+}
+.buttonBgColor{
+    background-color: aqua;
+}
